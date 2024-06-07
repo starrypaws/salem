@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
   const secret = document.querySelectorAll(".secret")
-  
+
    secret.forEach((toggle) => {
     toggle.addEventListener("click", function (event) {
       const h2 = document.querySelector("h2")
       const wrapper = document.querySelector(".wrapper")
+      const footer = document.querySelector(".site-footer")
       if (h2.style.display === "none") {
       h2.style.display = "block";
       wrapper.style.display = "none";
+      footer.style.display = "none";
       } else {
         h2.style.display = "none";
         wrapper.style.display = "block";
+        footer.style.display = "block";
       }
       event.preventDefault();
     })
